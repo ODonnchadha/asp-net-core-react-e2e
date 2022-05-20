@@ -24,3 +24,11 @@
     npm install bootstrap@5
     dotnet new webapi -minimal
   ```
+
+- EXPOSING, GETTING, & DISPLAYING DATA:
+```javascript
+  dotnet add package Microsoft.EntityFrameworkCore.Sqlite --version 6.*
+  dotnet add package Microsoft.EntityFrameworkCore.Design --version 6.*
+  dotnet ef migrations add initial
+  dotnet ef database update
+```
