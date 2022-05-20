@@ -22,4 +22,5 @@
     npx create-react-app@5 ui --template typescript
     npm start
     npm install bootstrap@5
+    dotnet new webapi -minimal
   ```
