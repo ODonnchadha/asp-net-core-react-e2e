@@ -26,9 +26,13 @@
   ```
 
 - EXPOSING, GETTING, & DISPLAYING DATA:
-```javascript
-  dotnet add package Microsoft.EntityFrameworkCore.Sqlite --version 6.*
-  dotnet add package Microsoft.EntityFrameworkCore.Design --version 6.*
-  dotnet ef migrations add initial
-  dotnet ef database update
-```
+  ```javascript
+    dotnet add package Microsoft.EntityFrameworkCore.Sqlite --version 6.*
+    dotnet add package Microsoft.EntityFrameworkCore.Design --version 6.*
+    dotnet ef migrations add initial
+    dotnet ef database update
+  ```
+  - Entities: Only used within API. Use DTOS for transfer.
+    - Contain database specifics. 
+    - Are meant only to access the database.
+    - Do not send them across the wre.

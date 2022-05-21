@@ -4,6 +4,7 @@ namespace api.Contexts
 {
     public class HouseDbContext : DbContext
     {
+        public HouseDbContext(DbContextOptions<HouseDbContext> options) : base(options) {}
         public DbSet<Entities.House> Houses => Set<Entities.House>();
 
         protected override void OnConfiguring(DbContextOptionsBuilder builder)
