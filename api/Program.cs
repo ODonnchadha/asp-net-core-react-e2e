@@ -8,7 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-
+builder.Services.AddCors();
 builder.Services.AddDbContext<HouseDbContext>(context => {
     context.UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
 });
@@ -20,6 +20,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+app.UseCors(
+    c => c.WithOrigins("http://localhost:3000").AllowAnyHeader().AllowAnyMethod());
 app.UseHttpsRedirection();
 
 app.MapGet("/houses", (IHouseRepository repository) =>

@@ -13,7 +13,7 @@ namespace api.Repositories
         {
             return await context.Houses.Select(
                 h => new Models.House(
-                    h.Id, h.Description, h.Coutry, h.Price)
+                    h.Id, h.Address, h.Coutry, h.Price)
             ).ToListAsync();
         }
     }

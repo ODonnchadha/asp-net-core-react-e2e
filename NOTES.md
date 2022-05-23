@@ -36,3 +36,7 @@
     - Contain database specifics. 
     - Are meant only to access the database.
     - Do not send them across the wre.
+  - Cross-Origin Resource Sharing: CORS
+    - By default browser will block HTTP responses from requests initiated in JavaScript.
+    - Only when the domain of API is different than the original.
+    - Explicitly allow origin by setting an HTTP header on the API response.
