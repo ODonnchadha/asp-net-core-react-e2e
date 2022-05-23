@@ -40,3 +40,15 @@
     - By default browser will block HTTP responses from requests initiated in JavaScript.
     - Only when the domain of API is different than the original.
     - Explicitly allow origin by setting an HTTP header on the API response.
+  - What's wrong with this?
+    - Fetch will occur on each re-render. Costly operation. 
+    - Only fetch when the component is first renendered.
+    - Fetch code should be elsewhere.
+  - What's wrong with this?
+    - When users stay on the same screen data will remain static.
+    - When the custom hook is used in multiple components it will fetch the data each time.
+    - We don't have a retry mechanism.
+    - SO: We need shared state, caching, controlled re-fetching and retries.
+  ```javascript
+    npm install axios@0 react-query@3
+  ```
