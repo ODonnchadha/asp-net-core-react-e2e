@@ -27,6 +27,16 @@ app.UseHttpsRedirection();
 app.MapGet("/houses", (IHouseRepository repository) =>
 {
     return repository.Get();
-});
+}).Produces<House[]>(StatusCodes.Status200OK);;
+
+app.MapGet("/house/{houseId:int}", async (int houseId, IHouseRepository repository) =>
+{
+    var detail = await repository.GetDetail(houseId);
+    if (detail == null)
+    {
+        return Results.Problem($"HouseId {houseId} does not exist.", statusCode: 404);
+    }
+    return Results.Ok(detail);
+}).ProducesProblem(404).Produces<HouseDetail>(StatusCodes.Status200OK);
 
 app.Run();

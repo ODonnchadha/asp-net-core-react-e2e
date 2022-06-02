@@ -57,3 +57,6 @@
     - Or the browser refocuses. Or when the network is reconnected.
     - 5 minutes cache. Retry automatically 3x. (React query documentation.)
   - Format the prices.
+
+- ADDING FRONTEND ROUTING & NAVIGATION:
+  - 
