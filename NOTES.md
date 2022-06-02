@@ -59,4 +59,6 @@
   - Format the prices.
 
 - ADDING FRONTEND ROUTING & NAVIGATION:
-  - 
+  ```javascript
+    npm install react-router-dom@6 @types/react-router-dom
+  ```

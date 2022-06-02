@@ -25,4 +25,12 @@ const useFetchHouses = () => {
 //   return houses;
 // }
 
+const useFetchHouse = (id: number) => {
+  return useQuery<House, AxiosError>(["houses", id], () => 
+    axios.get(`${config.url}/house/${id}`).then(
+      (response) => response.data)
+  );
+}
+
 export default useFetchHouses;
+export { useFetchHouse };
