@@ -62,3 +62,8 @@
   ```javascript
     npm install react-router-dom@6 @types/react-router-dom
   ```
+  - Navigation via useNavigation hook: Different from a redirect.
+  - Internal routing. No request to the server.
+
+- CREATING, UPDATING, & DELETING DATA:
+  - 

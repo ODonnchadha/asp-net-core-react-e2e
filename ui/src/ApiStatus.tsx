@@ -5,11 +5,11 @@ type Args = {
 const ApiStatus = ({status}: Args) => {
   switch(status) {
     case "error":
-      return <div>Communication error</div>;
+      return <div>COMMUNICATION ERROR...</div>;
     case "idle":
-      return <div>Idle</div>;
+      return <div>IDLE</div>;
     case "loading":
-      return <div>Loading...</div>;
+      return <div>LOADING...</div>;
     default:
       throw Error("API status error. Unknown state.");
   }
