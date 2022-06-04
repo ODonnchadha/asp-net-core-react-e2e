@@ -66,4 +66,7 @@
   - Internal routing. No request to the server.
 
 - CREATING, UPDATING, & DELETING DATA:
+  - Add a new house using a form. And details will allow for update or delete.
+  - Return DTO that was created:
+    - (1) Caller can verify creation & associated properties. (2) Id will now be known.
   - 
